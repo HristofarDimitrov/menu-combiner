@@ -1,0 +1,14 @@
+.menu-container {
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 16px;
+}
+
+.menu-title {
+  letter-spacing: 0.1rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px rgba(128, 128, 128, 0.733);
+}

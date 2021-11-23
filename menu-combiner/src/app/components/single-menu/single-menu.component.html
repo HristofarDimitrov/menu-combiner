@@ -1,0 +1,4 @@
+<div *ngIf="menu" class="menu-container">
+    <h2 class="menu-title">{{menu.name}}</h2>
+    <app-menu-item *ngFor="let item of menu.menuItems" [item]="item"></app-menu-item>
+</div>

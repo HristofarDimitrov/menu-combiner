@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDataService } from './services/getData.service';
+import { GetDataService, RestaurantData } from './services/getData.service';
 
 @Component({
   selector: 'app-root',
@@ -7,15 +7,18 @@ import { GetDataService } from './services/getData.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'menu-combiner';
-
   constructor(private getData: GetDataService) {}
 
-  public data: any = this.getData.getData();
+  public data?: RestaurantData[];
+
+  public error: any;
 
   ngOnInit() {
-    this.getData.getData().subscribe((data) => {
-      console.log(data);
-    });
+    this.getData.getData().subscribe(
+      (data) => {
+        this.data = data;
+      },
+      (error) => (this.error = error)
+    );
   }
 }

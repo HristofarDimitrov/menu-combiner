@@ -1,0 +1,38 @@
+.container {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 5rem;
+}
+
+.menu-title {
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  border-bottom: solid 1px rgba(160, 160, 160, 0.404);
+}
+
+.loading-container {
+  text-align: center;
+}
+
+.loading-title {
+  font-size: xx-large;
+  letter-spacing: 0.1rem;
+}
+
+.error-container {
+  border-bottom: solid 1px rgba(160, 160, 160, 0.404);
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-title {
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+
+.error-subtutle {
+  font-weight: 500;
+  color: rgba(128, 128, 128, 0.932);
+}

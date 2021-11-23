@@ -17,14 +17,14 @@ app.get("/crawler", async (req, res, next) => {
         const data3 = await getMemickaData();
 
         const result = [
-            {name: "Pivnice Ucapa", menuItems: data1},
-            {name: "Suzies", menuItems: data2},
-            {name: "Memicka", menuItems: data3}
+            { name: "Pivnice Ucapa", menuItems: data1 },
+            { name: "Suzies", menuItems: data2 },
+            { name: "Memicka", menuItems: data3 }
         ]
 
         return res.status(200).send(result);
     } catch (error) {
-        console.log(error);
+        return res.status(400).send({ message: "Error ocure", error })
     }
 })
 

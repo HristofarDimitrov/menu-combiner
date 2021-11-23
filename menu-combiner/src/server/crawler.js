@@ -12,16 +12,17 @@ app.use(cors())
 app.get("/crawler", async (req, res, next) => {
     res.set('Content-Type', 'text/html');
     try {
-        const data = await getPivniceUcapaData();
-        // console.log(data);
-
+        const data1 = await getPivniceUcapaData();
         const data2 = await getSuziesData();
-        // console.log(data2);
-
         const data3 = await getMemickaData();
-        console.log(data3);
 
-        return res.status(200).send(Buffer.from(data));
+        const result = [
+            {name: "Pivnice Ucapa", menuItems: data1},
+            {name: "Suzies", menuItems: data2},
+            {name: "Memicka", menuItems: data3}
+        ]
+
+        return res.status(200).send(result);
     } catch (error) {
         console.log(error);
     }

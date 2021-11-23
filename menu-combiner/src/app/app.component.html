@@ -1,2 +1,13 @@
-<!-- {{data | async}} -->
-<div [innerHtml]="data | async"></div>                       
+<div>
+  <div *ngIf="data">
+    <div *ngFor="let item of data | async">
+      <h2>{{ item.name }}</h2>
+      <ul *ngFor="let menuItem of item.menuItems">
+        <li>{{ menuItem }}</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <h3>Loading...</h3>
+  </div>
+</div>

@@ -11,11 +11,11 @@ export class AppComponent implements OnInit {
 
   constructor(private getData: GetDataService) {}
 
-  public data: any = this.getData.getPivniceUcapaData();
+  public data: any = this.getData.getData();
 
   ngOnInit() {
-    // this.getData.getPivniceUcapaData().subscribe((data) => {
-    //   console.log(data);
-    // });
+    this.getData.getData().subscribe((data) => {
+      console.log(data);
+    });
   }
 }

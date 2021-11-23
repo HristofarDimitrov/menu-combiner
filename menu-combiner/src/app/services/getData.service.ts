@@ -6,9 +6,7 @@ import { Observable } from 'rxjs';
 export class GetDataService {
   constructor(private http: HttpClient) {}
 
-  public getPivniceUcapaData(): Observable<any> {
-    return this.http.get('http://localhost:3000/crawler', {
-      responseType: 'text' as const,
-    });
+  public getData(): Observable<any> {
+    return this.http.get('http://localhost:3000/crawler');
   }
 }

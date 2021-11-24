@@ -8,4 +8,5 @@ import { RestaurantData } from 'src/app/services/getData.service';
 })
 export class SingleMenuComponent {
   @Input() public menu?: RestaurantData;
+  public fallbackItem = 'Pro tento den nebylo zadáno menu.';
 }

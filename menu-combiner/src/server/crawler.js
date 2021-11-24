@@ -3,7 +3,6 @@ const puppeteer = require('puppeteer');
 
 const app = express();
 const cors = require('cors');
-const e = require("express");
 const { getPivniceUcapaData, getSuziesData, getMemickaData } = require("./utils");
 const port = 3000;
 

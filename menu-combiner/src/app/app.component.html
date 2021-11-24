@@ -1,15 +1,17 @@
 <div class="container">
-  <h1 class="menu-title">Menu</h1>
+  <h1 class="menu-title">Menu na dnešní den</h1>
   <div *ngIf="data && !error">
     <div *ngFor="let item of data">
-        <app-single-menu [menu]="item"></app-single-menu>
+      <app-single-menu [menu]="item"></app-single-menu>
     </div>
   </div>
-  <div *ngIf="!data  && !error" class="loading-container">
-    <div class="loading-title">Loading...</div>
+  <div *ngIf="!data && !error" class="loading-container">
+    <div class="loading-title">Načítání prosím čekejte...</div>
   </div>
-  <div *ngIf="error"  class="error-container">
-    <h2 class="error-title">Error appear</h2>
-    <p class="error-subtutle">It appears that there is some problem with obtaining the data please try again later</p>
+  <div *ngIf="error" class="error-container">
+    <h2 class="error-title">Objeví se chyba</h2>
+    <p class="error-subtutle">
+      Zdá se, že je problém se získáním dat, zkuste to prosím znovu později
+    </p>
   </div>
 </div>
